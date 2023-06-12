@@ -35,6 +35,7 @@ resource "azurerm_storage_account" "image-account" {
     # environment = "staging"
   }
 
+  depends_on = [azurerm_resource_group.application_group]
 }
 
 resource "azurerm_storage_container" "images" {
