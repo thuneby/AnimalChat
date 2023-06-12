@@ -42,6 +42,6 @@ resource "azurerm_storage_container" "images" {
   storage_account_name  = azurecaf_name.image-account.result
   container_access_type = "private"
 
-  depends_on = [ azurerm_storage_account.image-account ]
+  depends_on = [azurerm_storage_account.image-account]
 }
 
