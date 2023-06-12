@@ -34,11 +34,14 @@ resource "azurerm_storage_account" "image-account" {
   tags = {
     # environment = "staging"
   }
+
 }
 
 resource "azurerm_storage_container" "images" {
   name                  = azurecaf_name.image-container.result
   storage_account_name  = azurecaf_name.image-account.result
   container_access_type = "private"
+
+  depends_on = [ azurerm_storage_account.image-account ]
 }
 
