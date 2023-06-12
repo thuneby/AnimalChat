@@ -3,18 +3,18 @@ locals {
 }
 
 resource "azurecaf_name" "resource-group" {
-  name     = "animalchat"
-  location = var.Location
+  name          = "animalchat"
+  resource_type = "azurerm_resource_group"
 }
 
 resource "azurecaf_name" "image-account" {
-  name     = "animalchat"
-  location = var.Location
+  name          = "animalchat"
+  resource_type = "azurerm_storage_account"
 }
 
 resource "azurecaf_name" "image-container" {
-  name     = "images"
-  location = var.Location
+  name          = "images"
+  resource_type = "azurerm_storage_container"
 }
 
 
