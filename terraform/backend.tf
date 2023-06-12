@@ -6,7 +6,7 @@ terraform {
     }
   
     backend "azurerm" {
-        resource_group_name  = "Terraform-state"
+        resource_group_name  = "rg-terraform"
         storage_account_name = "animalchatterraform"
         container_name       = "tfstate"
         key                  = "tfstate"
