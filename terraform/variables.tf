@@ -1,9 +1,9 @@
 variable "Location" {
-    type        = string
-    default     = "WestEurope"  
+  type    = string
+  default = "WestEurope"
 }
 
 variable "ResourceGroup" {
-    type        = string
-    default     = "rg-animalchat"   
+  type    = string
+  default = "rg-animalchat"
 }
