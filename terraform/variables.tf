@@ -3,7 +3,3 @@ variable "Location" {
   default = "WestEurope"
 }
 
-variable "ResourceGroup" {
-  type    = string
-  default = "rg-animalchat"
-}
