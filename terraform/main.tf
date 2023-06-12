@@ -3,15 +3,18 @@ locals {
 }
 
 resource "azurecaf_name" "resource-group" {
-  name = "animalchat"
+  name     = "animalchat"
+  location = var.Location
 }
 
 resource "azurecaf_name" "image-account" {
-  name = "animalchat"
+  name     = "animalchat"
+  location = var.Location
 }
 
 resource "azurecaf_name" "image-container" {
-  name = "images"
+  name     = "images"
+  location = var.Location
 }
 
 

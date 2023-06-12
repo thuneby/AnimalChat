@@ -45,9 +45,9 @@
 name: 'Apply Infrastructure'
 
 on:
-  push:
-    paths:
-      - 'terraform/*.tf'
+  # push:
+  #   paths:
+  #     - 'terraform/*.tf'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
