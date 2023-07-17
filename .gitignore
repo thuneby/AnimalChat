@@ -396,3 +396,12 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+terraform/.terraform/terraform.tfstate
+terraform/.terraform/providers/registry.terraform.io/aztfmod/azurecaf/1.2.10/windows_amd64/terraform-provider-azurecaf_v1.2.10.exe
+terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.4.0/windows_amd64/terraform-provider-local_v2.4.0_x5.exe
+.gitignore
+terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.65.0/windows_amd64/terraform-provider-azurerm_v3.65.0_x5.exe
+terraform/.terraform.lock.hcl
+terraform/.terraform.lock.hcl
+terraform/.terraform.lock.hcl
+terraform/.terraform.lock.hcl
