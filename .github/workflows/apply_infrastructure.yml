@@ -71,6 +71,10 @@ jobs:
     name: 'Terraform Validate'
     runs-on: 'ubuntu-latest'
 
+    defaults:
+      run:
+        working-directory: ./terraform
+
     steps:
       - uses: actions/checkout@v4
 
@@ -98,6 +102,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ./terraform
 
     steps:
     # Checkout the repository to the GitHub Actions runner
@@ -113,20 +118,18 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: |
-        cd terraform
         terraform init
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: |
-        cd terraform
         terraform plan -input=false -out=terraform.plan
 
     - name: Upload Terraform Plan
       uses: actions/upload-artifact@v3
       with:
         name: terraform-plan
-        path: terraform/terraform.plan
+        path: ./terraform/terraform.plan
         if-no-files-found: error 
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
@@ -153,6 +156,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ./terraform
 
     steps:
     # Checkout the repository to the GitHub Actions runner
@@ -160,8 +164,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: terraform-plan
-        path: terraform/terraform.plan
-
+        path: ./terraform
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
@@ -170,9 +173,7 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: |
-        cd terraform
-        terraform init
+      run:  terraform init
 
     # # Checks that all Terraform configuration files adhere to a canonical format
     # - name: Terraform Format
@@ -182,6 +183,4 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: |
-        cd terraform
-        terraform apply -auto-approve ./terraform.plan
+      run:  terraform apply -auto-approve ./terraform.plan
