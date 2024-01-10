@@ -161,6 +161,8 @@ jobs:
 
     steps:
     # Checkout the repository to the GitHub Actions runner
+    - uses: actions/checkout@v4
+
     - name: Get prepared plan
       uses: actions/download-artifact@v3
       with:
