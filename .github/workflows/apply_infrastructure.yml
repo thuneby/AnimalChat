@@ -129,7 +129,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: terraform-plan
-        path: ./terraform/terraform.plan
+        path: | 
+          ./terraform/terraform.plan
+          ./terraform/.terraform.lock.hcl
         if-no-files-found: error 
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
