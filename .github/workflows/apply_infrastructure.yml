@@ -186,5 +186,5 @@ jobs:
     #     terraform fmt -check
 
     # Generates an execution plan for Terraform
-    - name: Terraform Plan
+    - name: Terraform Apply
       run:  terraform apply -auto-approve ./terraform.plan
