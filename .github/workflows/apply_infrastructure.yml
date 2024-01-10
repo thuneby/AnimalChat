@@ -187,4 +187,4 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Apply
-      run:  terraform apply -auto-approve ./terraform.plan
+      run:  terraform apply -auto-approve -input=false terraform.plan
