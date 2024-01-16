@@ -12,9 +12,9 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "rg-terraform"
-    storage_account_name = "animalchatterraform"
-    container_name       = "tfstate"
-    key                  = "tfstate"
+    storage_account_name = "stapplicationterraform"
+    container_name       = "tfstatefile-apps"
+    key                  = "animalchat.tfstate"
   }
 }
 provider "azurerm" {
