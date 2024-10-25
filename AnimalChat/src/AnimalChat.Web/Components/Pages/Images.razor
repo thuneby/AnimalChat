@@ -1,1 +1,40 @@
 ﻿@page "/images"
+@using AnimalChat.Web.Services
+@attribute [StreamRendering(true)]
+
+@inject ImageService ImageService
+
+<PageTitle>Images</PageTitle>
+
+<h1>Images</h1>
+
+@if (images == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var image in images)
+        {
+            <li>
+                @*                 <img src="@image.FileName" alt="@image.Description" width="100" />
+ *@ 
+                <p>@image.Id</p>
+                <p>@image.FileName</p>
+                <p>@image.Description</p>
+                <p>Size: @image.Size bytes</p>
+                <p>Type: @image.MimeType</p>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Image> images;
+
+    protected override async Task OnInitializedAsync()
+    {
+        images = (await ImageService.GetImagesAsync()).ToList();
+    }
+}
