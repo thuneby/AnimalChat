@@ -8,14 +8,14 @@
 
 <h1>Images</h1>
 
-@if (images == null)
+@if (_images.Count == 0)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
     <ul>
-        @foreach (var image in images)
+        @foreach (var image in _images)
         {
             <li>
                 @*                 <img src="@image.FileName" alt="@image.Description" width="100" />
@@ -23,18 +23,27 @@ else
                 <p>@image.Id</p>
                 <p>@image.FileName</p>
                 <p>@image.Description</p>
-                <p>Size: @image.Size bytes</p>
-                <p>Type: @image.MimeType</p>
+                <p><img src="@GetImageSrc(image.Data)" alt="@image.Description" /></p>
             </li>
         }
     </ul>
 }
 
 @code {
-    private List<Image> images;
+    private List<Image> _images = new List<Image>();
 
     protected override async Task OnInitializedAsync()
     {
-        images = (await ImageService.GetImagesAsync()).ToList();
+        _images = (await ImageService.GetImagesAsync()).ToList();
+    }
+
+    private static string GetImageSrc(byte[] imageData)
+    {
+        if (imageData.Length == 0)
+        {
+            return string.Empty;
+        }
+        var base64Data = Convert.ToBase64String(imageData);
+        return $"data:image/jpeg;base64,{base64Data}";
     }
 }

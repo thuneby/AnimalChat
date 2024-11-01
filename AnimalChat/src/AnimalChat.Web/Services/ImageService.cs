@@ -9,5 +9,5 @@
         }
     }
 
-    public record Image(int Id, string FileName, string Description, int Size, string MimeType);
+    public record Image(int Id, string FileName, string Description, int Size, string MimeType, byte[] Data);
 }
