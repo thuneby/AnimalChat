@@ -1,0 +1,53 @@
+﻿@page "/images"
+@using AnimalChat.Web.Services
+@attribute [StreamRendering(true)]
+
+@inject ImageService ImageService
+
+<PageTitle>Dyr</PageTitle>
+
+<h1>Dyr</h1>
+
+@if (_images.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Billede</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var image in _images)
+            {
+                <tr>
+                    <td>@image.Description</td>
+                    <td><img src="@GetImageSrc(image.Data)" alt="@image.Description" width="100"/></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Image> _images = new List<Image>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _images = (await ImageService.GetImagesAsync()).ToList();
+    }
+
+    private static string GetImageSrc(byte[] imageData)
+    {
+        if (imageData.Length == 0)
+        {
+            return string.Empty;
+        }
+        var base64Data = Convert.ToBase64String(imageData);
+        return $"data:image/jpeg;base64,{base64Data}";
+    }
+}
