@@ -14,19 +14,27 @@
 }
 else
 {
-    <ul>
-        @foreach (var image in _images)
-        {
-            <li>
-                @*                 <img src="@image.FileName" alt="@image.Description" width="100" />
- *@ 
-                <p>@image.Id</p>
-                <p>@image.FileName</p>
-                <p>@image.Description</p>
-                <p><img src="@GetImageSrc(image.Data)" alt="@image.Description" /></p>
-            </li>
-        }
-    </ul>
+    <table>
+        <thead>
+            <tr>
+@*                 <th>Id</th>
+                <th>File Name</th>
+ *@                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var image in _images)
+            {
+                <tr>
+@*                     <td>@image.Id</td>
+                    <td>@image.FileName</td>
+ *@                    <td>@image.Description</td>
+                    <td><img src="@GetImageSrc(image.Data)" alt="@image.Description" width="100"/></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 @code {
