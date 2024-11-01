@@ -4,9 +4,9 @@
 
 @inject ImageService ImageService
 
-<PageTitle>Images</PageTitle>
+<PageTitle>Dyr</PageTitle>
 
-<h1>Images</h1>
+<h1>Dyr</h1>
 
 @if (_images.Count == 0)
 {
@@ -17,19 +17,15 @@ else
     <table>
         <thead>
             <tr>
-@*                 <th>Id</th>
-                <th>File Name</th>
- *@                <th>Description</th>
-                <th>Image</th>
+                <th>Navn</th>
+                <th>Billede</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var image in _images)
             {
                 <tr>
-@*                     <td>@image.Id</td>
-                    <td>@image.FileName</td>
- *@                    <td>@image.Description</td>
+                    <td>@image.Description</td>
                     <td><img src="@GetImageSrc(image.Data)" alt="@image.Description" width="100"/></td>
                 </tr>
             }
