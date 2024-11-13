@@ -2,6 +2,7 @@
 	{
 		"Id": 1,
 		"FileName": "Bison.jpg",
+		"AnimalName": "Bison",
 		"Description": "en bison",
 		"Size": 86163,
 		"MimeType": "image/jpg"
@@ -9,13 +10,15 @@
 	{
 		"Id": 2,
 		"FileName": "Cat.jpg",
-		"Description": "en kat",
+    "AnimalName": "Cat",
+    "Description": "en kat",
 		"Size": 54063,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 3,
 		"FileName": "Clown_fish.jpg",
+    "AnimalName": "Clown Fish",
 		"Description": "en klovnfisk",
 		"Size": 31740,
 		"MimeType": "image/jpg"
@@ -23,13 +26,15 @@
 	{
 		"Id": 4,
 		"FileName": "Dolphin.jpg",
-		"Description": "en delfin",
+    "AnimalName": "Dolphin",
+    "Description": "en delfin",
 		"Size": 61349,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 5,
 		"FileName": "Duckling.jpg",
+    "AnimalName": "Duckling",
 		"Description": "en ælling",
 		"Size": 68033,
 		"MimeType": "image/jpg"
@@ -37,6 +42,7 @@
 	{
 		"Id": 6,
 		"FileName": "Flamingos.jpg",
+    "AnimalName": "Flamingo",
 		"Description": "en flamingo",
 		"Size": 85636,
 		"MimeType": "image/jpg"
@@ -44,6 +50,7 @@
 	{
 		"Id": 7,
 		"FileName": "Giraffe.jpg",
+    "AnimalName": "Giraffe",
 		"Description": "en giraf",
 		"Size": 48678,
 		"MimeType": "image/jpg"
@@ -51,6 +58,7 @@
 	{
 		"Id": 8,
 		"FileName": "Goat.jpg",
+    "AnimalName": "Goat",
 		"Description": "en ged",
 		"Size": 25602,
 		"MimeType": "image/jpg"
@@ -58,6 +66,7 @@
 	{
 		"Id": 9,
 		"FileName": "Goose.jpg",
+    "AnimalName": "Goose",
 		"Description": "en gås",
 		"Size": 73409,
 		"MimeType": "image/jpg"
@@ -65,6 +74,7 @@
 	{
 		"Id": 10,
 		"FileName": "Hippos.jpg",
+    "AnimalName": "Hippo",
 		"Description": "en flodhest",
 		"Size": 73241,
 		"MimeType": "image/jpg"
@@ -72,6 +82,7 @@
 	{
 		"Id": 11,
 		"FileName": "Horse.jpg",
+    "AnimalName": "Horse",
 		"Description": "en hest",
 		"Size": 112750,
 		"MimeType": "image/jpg"
@@ -79,6 +90,7 @@
 	{
 		"Id": 12,
 		"FileName": "Lion.jpg",
+    "AnimalName": "Lion",
 		"Description": "en løve",
 		"Size": 89127,
 		"MimeType": "image/jpg"
@@ -86,6 +98,7 @@
 	{
 		"Id": 13,
 		"FileName": "Parrot.jpg",
+    "AnimalName": "Parrot",
 		"Description": "en papegøje",
 		"Size": 67300,
 		"MimeType": "image/jpg"
@@ -93,6 +106,7 @@
 	{
 		"Id": 14,
 		"FileName": "Penguins.jpg",
+    "AnimalName": "Penguin",
 		"Description": "en pingvin",
 		"Size": 59872,
 		"MimeType": "image/jpg"
@@ -100,6 +114,7 @@
 	{
 		"Id": 15,
 		"FileName": "Polar_bear.jpg",
+    "AnimalName": "Polar Bear",
 		"Description": "en isbjørn",
 		"Size": 39061,
 		"MimeType": "image/jpg"
@@ -107,6 +122,7 @@
 	{
 		"Id": 16,
 		"FileName": "Rhino.jpg",
+    "AnimalName": "Rhino",
 		"Description": "et næsehorn",
 		"Size": 64583,
 		"MimeType": "image/jpg"
@@ -114,6 +130,7 @@
 	{
 		"Id": 17,
 		"FileName": "Sea_turtle.jpg",
+    "AnimalName": "Sea Turtle",
 		"Description": "en havskildpadde",
 		"Size": 118279,
 		"MimeType": "image/jpg"
@@ -121,6 +138,7 @@
 	{
 		"Id": 18,
 		"FileName": "Shark.jpg",
+    "AnimalName": "Shark",
 		"Description": "en haj",
 		"Size": 29920,
 		"MimeType": "image/jpg"
@@ -128,6 +146,7 @@
 	{
 		"Id": 19,
 		"FileName": "Sheep.jpg",
+    "AnimalName": "Sheep",
 		"Description": "et får",
 		"Size": 76250,
 		"MimeType": "image/jpg"
@@ -135,6 +154,7 @@
 	{
 		"Id": 20,
 		"FileName": "Zebra.jpg",
+    "AnimalName": "Zebra",
 		"Description": "en zebra",
 		"Size": 111389,
 		"MimeType": "image/jpg"
