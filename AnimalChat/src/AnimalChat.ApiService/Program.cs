@@ -46,5 +46,10 @@ app.MapGet("/images", async () =>
     .WithName("GetImages")
     .WithOpenApi();
 
+app.MapGet("/images/{id}", async (int id) =>
+        await ImageApi.GetImageAsync(id))
+    .WithName("GetImage")
+    .WithOpenApi();
+
 app.Run();
 

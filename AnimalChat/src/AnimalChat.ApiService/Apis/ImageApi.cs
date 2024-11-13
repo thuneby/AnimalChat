@@ -33,5 +33,11 @@ namespace AnimalChat.ApiService.Apis
             }
             return images;
         }
+
+        public static async Task<Image> GetImageAsync(int id)
+        {
+            var images = await GetImagesAsync();
+            return images.FirstOrDefault(i => i.Id == id)?? new Image();
+        }
     }
 }

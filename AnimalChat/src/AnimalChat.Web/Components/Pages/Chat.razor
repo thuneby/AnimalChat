@@ -1,0 +1,48 @@
+﻿@page "/chat/{Id:int}"
+@using AnimalChat.Web.Models
+@using AnimalChat.Web.Services
+@attribute [StreamRendering(true)]
+
+@inject ImageService ImageService
+
+<PageTitle>Dyr</PageTitle>
+
+<h3>Chat med @_image.Description</h3>
+
+<div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+        <img class="card-img-top" src="@GetImageSrc(_image.Data)" alt="@_image.Description" />
+        <div class="card-body">
+            <p class="card-text">@_image.AnimalName</p>
+
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private static readonly Random Random = new Random();
+    
+    [Parameter]
+    public int Id { get; set; }
+    private Image _image = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id == 0)
+        {
+            Id = Random.Next(1, 21);
+        }
+        _image = await ImageService.GetImageAsync(Id);
+    }
+
+    private static string GetImageSrc(byte[] imageData)
+    {
+        if (imageData.Length == 0)
+        {
+            return string.Empty;
+        }
+        var base64Data = Convert.ToBase64String(imageData);
+        return $"data:image/jpeg;base64,{base64Data}";
+    }
+}
