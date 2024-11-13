@@ -1,7 +1,61 @@
 ﻿@page "/"
+@using AnimalChat.Web.Models
+@using AnimalChat.Web.Services
+@attribute [StreamRendering(true)]
 
-<PageTitle>Home</PageTitle>
+@inject ImageService ImageService
 
-<h1>Hello, world!</h1>
+<PageTitle>Dyr</PageTitle>
 
-Welcome to your new app.
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+        <h1 class="display-4">Chat med dyrene</h1>
+    </div>
+</div>
+
+@if (_images.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                @foreach (var image in _images)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img class="card-img-top" src="@GetImageSrc(image.Data)" alt="@image.Description" />
+                            <div class="card-body">
+@*                                 <p class="card-text">@image.Description</p>
+ *@                                <p>
+                                    <a class="btn btn-success" href="chat/@image.Id">Chat med @image.Description &raquo;</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<Image> _images = new List<Image>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _images = (await ImageService.GetImagesAsync()).ToList();
+    }
+
+    private static string GetImageSrc(byte[] imageData)
+    {
+        if (imageData.Length == 0)
+        {
+            return string.Empty;
+        }
+        var base64Data = Convert.ToBase64String(imageData);
+        return $"data:image/jpeg;base64,{base64Data}";
+    }
+}

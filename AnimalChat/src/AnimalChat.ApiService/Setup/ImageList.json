@@ -2,140 +2,140 @@
 	{
 		"Id": 1,
 		"FileName": "Bison.jpg",
-		"Description": "Bison",
+		"Description": "en bison",
 		"Size": 86163,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 2,
 		"FileName": "Cat.jpg",
-		"Description": "Kat",
+		"Description": "en kat",
 		"Size": 54063,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 3,
 		"FileName": "Clown_fish.jpg",
-		"Description": "Klovnfisk",
+		"Description": "en klovnfisk",
 		"Size": 31740,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 4,
 		"FileName": "Dolphin.jpg",
-		"Description": "Delfin",
+		"Description": "en delfin",
 		"Size": 61349,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 5,
 		"FileName": "Duckling.jpg",
-		"Description": "Ælling",
+		"Description": "en ælling",
 		"Size": 68033,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 6,
 		"FileName": "Flamingos.jpg",
-		"Description": "Flamingoer",
+		"Description": "en flamingo",
 		"Size": 85636,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 7,
 		"FileName": "Giraffe.jpg",
-		"Description": "Giraf",
+		"Description": "en giraf",
 		"Size": 48678,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 8,
 		"FileName": "Goat.jpg",
-		"Description": "Ged",
+		"Description": "en ged",
 		"Size": 25602,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 9,
 		"FileName": "Goose.jpg",
-		"Description": "Gås",
+		"Description": "en gås",
 		"Size": 73409,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 10,
 		"FileName": "Hippos.jpg",
-		"Description": "Flodheste",
+		"Description": "en flodhest",
 		"Size": 73241,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 11,
 		"FileName": "Horse.jpg",
-		"Description": "Hest",
+		"Description": "en hest",
 		"Size": 112750,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 12,
 		"FileName": "Lion.jpg",
-		"Description": "Løve",
+		"Description": "en løve",
 		"Size": 89127,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 13,
 		"FileName": "Parrot.jpg",
-		"Description": "Papegøje",
+		"Description": "en papegøje",
 		"Size": 67300,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 14,
 		"FileName": "Penguins.jpg",
-		"Description": "Pingviner",
+		"Description": "en pingvin",
 		"Size": 59872,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 15,
 		"FileName": "Polar_bear.jpg",
-		"Description": "Isbjørn",
+		"Description": "en isbjørn",
 		"Size": 39061,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 16,
 		"FileName": "Rhino.jpg",
-		"Description": "Næsehorn",
+		"Description": "et næsehorn",
 		"Size": 64583,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 17,
 		"FileName": "Sea_turtle.jpg",
-		"Description": "Havskildpadde",
+		"Description": "en havskildpadde",
 		"Size": 118279,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 18,
 		"FileName": "Shark.jpg",
-		"Description": "Haj",
+		"Description": "en haj",
 		"Size": 29920,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 19,
 		"FileName": "Sheep.jpg",
-		"Description": "Får",
+		"Description": "et får",
 		"Size": 76250,
 		"MimeType": "image/jpg"
 	},
 	{
 		"Id": 20,
 		"FileName": "Zebra.jpg",
-		"Description": "Zebra",
+		"Description": "en zebra",
 		"Size": 111389,
 		"MimeType": "image/jpg"
 	}
