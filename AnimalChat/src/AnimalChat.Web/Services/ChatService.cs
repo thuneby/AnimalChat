@@ -1,6 +1,8 @@
-﻿namespace AnimalChat.Web.Services
+﻿using OpenAI;
+
+namespace AnimalChat.Web.Services
 {
-    public class ChatService
+    public class ChatService(OpenAIClient client)
     {
     }
 }
