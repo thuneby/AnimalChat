@@ -3,7 +3,7 @@ using OpenAI.Chat;
 
 namespace AnimalChat.Web.Services
 {
-    public class OpenAiService(OpenAIClient client, string modelName)
+    public class OpenAiService(OpenAIClient client, string modelName = "gpt-4o")
     {
         /// <summary>
         /// System prompt to send with user prompts to instruct the model for chat session

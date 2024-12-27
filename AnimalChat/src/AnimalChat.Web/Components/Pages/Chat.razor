@@ -4,6 +4,7 @@
 @attribute [StreamRendering(true)]
 
 @inject ImageService ImageService
+@inject ChatService ChatService
 
 <PageTitle>Dyr</PageTitle>
 
@@ -18,13 +19,23 @@
         </div>
     </div>
 </div>
+<section class="flex-grow-1">
+    <ChatPane @ref="@ChatPane" CurrentSession="@CurrentSession" />
+</section>
 
 @code {
 
-    private static readonly Random Random = new Random();
+    [Parameter]
+    public EventCallback<string> OnChatUpdated { get; set; } = default!;
     
     [Parameter]
     public int Id { get; set; }
+
+    private static readonly Random Random = new Random();
+    private ChatPane? ChatPane = default;
+    public Session? CurrentSession;
+
+
     private Image _image = new();
 
     protected override async Task OnInitializedAsync()
@@ -34,6 +45,18 @@
             Id = Random.Next(1, 21);
         }
         _image = await ImageService.GetImageAsync(Id);
+        ChatPane = new ChatPane();
+        await this.InvokeAsync(async () =>
+        {
+            await LoadCurrentChatAsync();
+            if (CurrentSession != null) ChatPane.ChangeCurrentChatSession(CurrentSession);
+            this.StateHasChanged();
+        });
+    }
+
+    private async Task LoadCurrentChatAsync()
+    {
+        CurrentSession = await ChatService.CreateNewChatSession(_image.AnimalName);
     }
 
     private static string GetImageSrc(byte[] imageData)

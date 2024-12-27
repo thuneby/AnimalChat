@@ -17,13 +17,13 @@ namespace AnimalChat.Web.Models
         [JsonIgnore]
         public List<Message> Messages { get; set; }
 
-        public Session()
+        public Session(string name)
         {
             Id = Guid.NewGuid().ToString();
             Type = nameof(Session);
-            SessionId = this.Id;
+            SessionId = Id;
             TokensUsed = 0;
-            Name = "New Chat";
+            Name = name;
             Messages = [];
         }
 

@@ -22,6 +22,10 @@ builder.Services.AddHttpClient<ImageService>(client =>
         client.BaseAddress = new ("https+http://apiservice");
     });
 
+builder.Services.AddSingleton<StateService>();
+builder.Services.AddSingleton<ChatService>();
+builder.Services.AddSingleton<OpenAiService>();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -31,7 +35,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
