@@ -8,6 +8,7 @@ namespace AnimalChat.Web.Models
         [Required]
         public string FileName { get; set; } = string.Empty;
         public string AnimalName { get; set; } = string.Empty;
+        public string Article { get; set; } = string.Empty;
 
         public string Description { get; set; } = string.Empty;
         public string MimeType { get; set; } = "image/jpeg";

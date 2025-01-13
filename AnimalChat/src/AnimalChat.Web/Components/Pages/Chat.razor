@@ -6,13 +6,13 @@
 @inject ImageService ImageService
 @inject ChatService ChatService
 
-<PageTitle>Dyr</PageTitle>
+<PageTitle>Animals</PageTitle>
 
-<h3>Chat med @_image.Description</h3>
+<h3>Chat with @_image.Article @_image.AnimalName</h3>
 
 <div class="col-md-4 mb-4">
     <div class="card h-100 shadow-sm">
-        <img class="card-img-top" src="@GetImageSrc(_image.Data)" alt="@_image.Description" />
+        <img class="card-img-top" src="@GetImageSrc(_image.Data)" alt="@_image.AnimalName" />
         <div class="card-body">
             <p class="card-text">@_image.AnimalName</p>
 
